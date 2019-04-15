@@ -13,15 +13,39 @@ public class randomSongs : MonoBehaviour {
     public AudioClip rickroll;
     public AudioClip weAreNumberBork;
 
-
+    public int OldId;
     // Use this for initialization
     void Start () {
-
-        int rand = Random.Range(0, 7);
+        OldId = -1;
+        InvokeRepeating("playSong", 0.01f, 8);
         
-        switch (rand)
+    }
+	
+	// Update is called once per frame
+	void Update () {
+    }
+
+    void playSong()
+    {
+        au.Stop();
+        int id = Random.Range(1, 6);
+
+
+        if (id == OldId)
         {
-            
+            id = Random.Range(1, 6);
+            randSong(id);
+        }
+        randSong(id);
+
+        Debug.Log(id);
+        
+    }
+
+    public void randSong(int id)
+    {
+        switch (id)
+        {
             case 1:
                 au.PlayOneShot(hentaiSounds);
                 break;
@@ -41,10 +65,6 @@ public class randomSongs : MonoBehaviour {
                 au.PlayOneShot(blueHitler);
                 break;
         }
+        OldId = id;
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

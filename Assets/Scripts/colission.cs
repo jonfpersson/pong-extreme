@@ -12,7 +12,7 @@ public class colission : MonoBehaviour {
     {
         if (collision.gameObject.name == "west" || collision.gameObject.name == "east")
         {
-            Debug.Log("Game over");
+            //Debug.Log("Game over");
             gameOverTxt.SetActive(true);
             isGameOver = true;
         }

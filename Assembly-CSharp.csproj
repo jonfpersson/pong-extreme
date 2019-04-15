@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ballMovement.cs" />
     <Compile Include="Assets\Scripts\colission.cs" />
+    <Compile Include="Assets\Scripts\goalEarrape.cs" />
     <Compile Include="Assets\Scripts\paddleControl.cs" />
     <Compile Include="Assets\Scripts\randomSongs.cs" />
     <Compile Include="Assets\Scripts\restartScene.cs" />
